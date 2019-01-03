@@ -12,73 +12,73 @@ const rp = require('request-promise');
 const fs = require('fs');
 const qs = require('querystring');
 
-function Pr(url) {
-	return new Promise((resolve, reject) => {
-		$.ajax({
-			url: url,
-			success: function(response) {
-				resolve(response.data)
-			},
-			error: function(err) {
-				reject(err)
-			}
-		})
-	})
-}
-Pr('www.xxx.com/a').then((res) => {
-	console.log(res)
-	return res
-}).then((res) => {
-	if (res) {
-		Pr('www.xxx.com/b')
-	}
-}).then(() => {
+// function Pr(url) {
+// 	return new Promise((resolve, reject) => {
+// 		$.ajax({
+// 			url: url,
+// 			success: function(response) {
+// 				resolve(response.data)
+// 			},
+// 			error: function(err) {
+// 				reject(err)
+// 			}
+// 		})
+// 	})
+// }
+// Pr('www.xxx.com/a').then((res) => {
+// 	console.log(res)
+// 	return res
+// }).then((res) => {
+// 	if (res) {
+// 		Pr('www.xxx.com/b')
+// 	}
+// }).then(() => {
 
-})
+// })
 
-function Car(color, price) {
-	this.color = color;
-	this.price = price;
-}
-Car.prototype.sell = function(color, price) {
-	alert(`把${this.color}的dawdawdCruze卖给了小王，价格是${this.price}`)
-}
-var Cruze = function(color, price, name) {
-	Car.call(this, color, price)
-	this.name = name
-}
-var __pro = Object.create(Car.prototype)
-Cruze.prototype = __pro
-__pro.constructor = Cruze;
-Cruze.prototype.constructor = Cruze
+// function Car(color, price) {
+// 	this.color = color;
+// 	this.price = price;
+// }
+// Car.prototype.sell = function(color, price) {
+// 	alert(`把${this.color}的dawdawdCruze卖给了小王，价格是${this.price}`)
+// }
+// var Cruze = function(color, price, name) {
+// 	Car.call(this, color, price)
+// 	this.name = name
+// }
+// var __pro = Object.create(Car.prototype)
+// Cruze.prototype = __pro
+// __pro.constructor = Cruze;
+// Cruze.prototype.constructor = Cruze
 
-Cruze.prototype.sell = function(color, price, name) {
-	alert(`把${this.color}的Cruze卖给了小王，价格是${this.price}，${this.name}`)
-}
-var s = new Cruze('红色', '14万', '王圣元')
-s.sell()
+// Cruze.prototype.sell = function(color, price, name) {
+// 	alert(`把${this.color}的Cruze卖给了小王，价格是${this.price}，${this.name}`)
+// }
+// var s = new Cruze('红色', '14万', '王圣元')
+// s.sell()
 
-class Car {
-	constructor(color, price) {
-		this.color = color;
-		this.price = price;
-	}
-	sell() {
-		alert(`把${this.color}的Cruze卖给了小王，价格是${this.price}`)
-	}
-}
-class Cruze extends Car {
-	constructor(color, price, name) {
-		super(color, price)
-		this.name = name
-	}
-	sell() {
-		super.sell()
-		console.log(this.name)
-	}
-}
-var s = new Cruze('红色', '14万', '王圣元')
-s.sell()
+// class Car {
+// 	constructor(color, price) {
+// 		this.color = color;
+// 		this.price = price;
+// 	}
+// 	sell() {
+// 		alert(`把${this.color}的Cruze卖给了小王，价格是${this.price}`)
+// 	}
+// }
+// class Cruze extends Car {
+// 	constructor(color, price, name) {
+// 		super(color, price)
+// 		this.name = name
+// 	}
+// 	sell() {
+// 		super.sell()
+// 		console.log(this.name)
+// 	}
+// }
+// var s = new Cruze('红色', '14万', '王圣元')
+// s.sell()
 //模块一、自动对bitcoin接口发起请求，请求回数据，导入数据库（json文件）。
 //注：数据库用一个json文件代替
 
