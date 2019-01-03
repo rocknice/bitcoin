@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+	<meta charset="UTF-8">
+	<title>中国区比特币交易量查询</title>
+	<style type="text/css">
+		div{
+			margin-top: 10px;
+		}
+		.starttime,.endtime{
+			width: 150px;
+			height: 25px;
+		}
+		.wrap{
+			margin-left: 20px;
+			border:1px solid black;
+			padding-left: 20px;
+		}
+		.submit{
+			margin-top: 10px;
+			width: 70px;
+			height: 30px;
+			border-radius: 15px;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+		#container{
+			margin-top: 20px;
+		}
+	</style>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+	<script type="text/javascript" src="./laydate/laydate.js"></script>
+</head>
+<body style="height: 100%; margin: 0">
+	<div class="wrap">
+		<h1>中国区比特币交易量查询</h1>
+		<div>起始时间：
+			<input type="datetime" class="starttime" placeholder="例：2018-04-21 17:17:10" name="search_start_date">
+		</div>
+		<div>终止时间：
+			<input type="datetime" class="endtime" placeholder="例：2018-04-21 17:17:10" name="search_end_date">
+		</div>
+		<input class= "submit" type="submit" />
+		<p class="deal">总成交额为人民币：</p>
+	</div>
+	<div id="container" style="height: 100%"></div>
+	
+	<script type="text/javascript" src="./scripts/search.js"></script>
+	<script type="text/javascript" src="./scripts/showData.js"></script>
+</body>
+</html>

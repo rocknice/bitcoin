@@ -1,0 +1,10 @@
+.wrap{
+	margin-left: 20px;
+}
+
+.submit{
+	width: 50px;
+	height: 30px;
+	border-radius: 10px;
+	font-size: 14px;
+}
